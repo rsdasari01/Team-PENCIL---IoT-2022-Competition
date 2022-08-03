@@ -20,3 +20,7 @@ Paired with the DFPlayerMini is a 5W 4Ohm speaker from Logitech. Taken from a pa
 ### The LEDs
 ![IMG_4408](https://user-images.githubusercontent.com/80157888/182253741-e4c3c389-4307-4755-b65d-f25eb8e1de3d.jpeg)
 We used some WS2812B LEDs in order to display a color that would indicate the status of the home. These LEDS are super bright and use the full color spectrum! Integration is super simple via the use of the FastLED library which allows us to control the LEDs with a few simple commands.
+### Data Collection
+![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/182686343-377f8d0d-8b03-46dc-a7d1-3017b3a9f723.png)
+![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/182686444-dcadcb55-4f79-48ac-8820-647a7fdab9e6.png)
+![pasted image 0](https://user-images.githubusercontent.com/110428822/182686543-4df9b7d9-b759-4ca1-aede-1d7a8ede1c3b.png)
