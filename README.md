@@ -25,7 +25,7 @@ We used some WS2812B LEDs in order to display a color that would indicate the st
 ### Data Collection
 ![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/182686444-dcadcb55-4f79-48ac-8820-647a7fdab9e6.png)
 ![pasted image 0](https://user-images.githubusercontent.com/110428822/182686543-4df9b7d9-b759-4ca1-aede-1d7a8ede1c3b.png)
-<img width="445" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
 We used this image
 <img width="445" alt="image" src="https://user-images.githubusercontent.com/110428822/182690124-f2b63ef4-6e42-4ca4-aeed-609cad2960e0.png">
 WE used this image
