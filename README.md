@@ -30,29 +30,56 @@ Our sensor detects different gasses by using thresholds and boundries that we cr
 
 For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity, that was read. For the normal room temperature atmosphere we see after the first step the gas resistivity spikes up majorilly but, gradually decreases from 7000/8000 to 2000/3000 which then after the values decrease to around 200 and continue to decrease until step 8, which then they increase to 100. After doing many experiences we figured that the gases in each room differ a lot so we decide to record values in the same room. The purpose of the Hp-354 normal readings is to compare them to the other gasses and other heat profiles. It also known as the 'constant' reading.
 
+
+
+
+
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110428822/182690124-f2b63ef4-6e42-4ca4-aeed-609cad2960e0.png">
 
 WE used this image
+
+
+
+
 
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110428822/182690384-f9c48e31-42d3-4899-a970-e61183c14f8b.png">
 
 WE used this image
 
+
+
+
+
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110428822/182690454-f659a307-3ba5-4a50-9804-883f96e7e804.png">
 
 We used this image
+
+
+
+
 
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110428822/182690651-4b36ec2a-1949-4c6d-9410-8b3f983b9183.png">
 
 We used this image
 
+
+
+
+
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110428822/182690713-3952e303-23fb-45b4-aa78-636890895f46.png">
 
 We used this image
 
+
+
+
+
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110428822/182690899-e512b0ab-6c38-4fbd-a077-a9d533f116c7.png">
 
 We used this image
+
+
+
 
 
 
