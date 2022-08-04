@@ -28,15 +28,15 @@ Our sensor detects different gasses by using thresholds and boundries that we cr
 ![pasted image 0](https://user-images.githubusercontent.com/110428822/182686543-4df9b7d9-b759-4ca1-aede-1d7a8ede1c3b.png)
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
 
-For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity, that was read. For the normal room temperature atmosphere we see after the first step the gas resistivity spikes up majorilly but, gradually decreases from 7000/8000 to 2000/3000 which then after the values decrease to around 200 and continue to decrease until step 8, which then they increase to 100. After doing many experiences we figured that the gases in each room differ a lot so we decide to record values in the same room. The purpose of the Hp-354 normal readings is to compare them to the other gasses and other heat profiles. It also known as the 'constant' reading.
+For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. For the normal room temperature atmosphere we see after the first step the gas resistivity spikes up majorilly but, gradually decreases from 7000/8000 to 2000/3000 which then after the values decrease to around 200 and continue to decrease until step 8, which then they increase to 100. After doing many experiences we figured that the gases in each room differ a lot so we decide to record values in the same room. The purpose of the Hp-354 normal readings is to compare them to the other gasses and other heat profiles. It also known as the 'constant' reading.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690124-f2b63ef4-6e42-4ca4-aeed-609cad2960e0.png">
 
-WE used this image
+For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. For the Bleach the trend and values are very similar to the normal readings, the only difference being that the readings for the gas resistivity is slightly higher when compared to the normal values, which would mean we would have to keep our thresholds for the bleach to be very small in order to prevent overlapping with the normal values.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690384-f9c48e31-42d3-4899-a970-e61183c14f8b.png">
 
-WE used this image
+For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. The difference
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690454-f659a307-3ba5-4a50-9804-883f96e7e804.png">
 
