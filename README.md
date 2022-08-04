@@ -1,6 +1,8 @@
 # Team PENCIL presents
 ## The Sharpener
-Is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home!
+The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home! This is for homeowners to let them know if there is a leak or fire in their house.
+## Our Plan
+Our plan was to make a device that can detect harmful substances if the are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the proggraming, we started running tests for data. After all of that we finished programming the speaker and lights.
 ## The Team 
 In order to make this device, we had to have a team that was both knowledgable as well as innovative, ##qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also hanled most of the Arduino code. 
 ## The Hardware
