@@ -52,4 +52,4 @@ The difference between Hp-411's values for bleach and Hp-354's values for bleach
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690899-e512b0ab-6c38-4fbd-a077-a9d533f116c7.png">
 
-Hp-411
+Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, but it has lower values than both. Hp-411 fire values were somewhat easier to record as after many trial with the Hp-354 fire values, we got the hang of it.
