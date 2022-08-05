@@ -2,9 +2,9 @@
 ## The Sharpener
 The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home! This is for homeowners to let them know if there is a leak or fire in their house.
 ## Our Plan
-Our plan was to make a device that can detect harmful substances if the are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the proggraming, we started running tests for data. After all of that we finished programming the speaker and lights.
+Our plan was to make a device that can detect harmful substances if they are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the programming, we started running tests for data. After all of that we finished programming the speaker and lights and ran our last test for data.
 ## The Team 
-In order to make this device, we had to have a team that was both knowledgable as well as innovative, ##qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also hanled most of the Arduino code. 
+In order to make this device, we had to have a team that was knowledgable as well as innovative and helpful, ##qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also handled most of the Arduino code. 
 ## The Hardware
 This device contains a plethora of hardware parts that are required to make it the best that it can be!
 ### The Case
@@ -23,7 +23,7 @@ Paired with the DFPlayerMini is a 5W 4Ohm speaker from Logitech. Taken from a pa
 ![IMG_4408](https://user-images.githubusercontent.com/80157888/182253741-e4c3c389-4307-4755-b65d-f25eb8e1de3d.jpeg)
 We used some WS2812B LEDs in order to display a color that would indicate the status of the home. These LEDS are super bright and use the full color spectrum! Integration is super simple via the use of the FastLED library which allows us to control the LEDs with a few simple commands.
 ## Data Collection
-Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect dtat of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
+Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect data of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
 ### Excel Graphs
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
 
@@ -54,3 +54,26 @@ The difference between Hp-411's values for bleach and Hp-354's values for bleach
 Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, but it has lower values than both. Hp-411 fire values were somewhat easier to record as after many trial with the Hp-354 fire values, we got the hang of it.
 
 ### Python Graphs
+![Screenshot 2022-08-01 150747](https://user-images.githubusercontent.com/110428822/183178385-a39f93a1-03f8-4f25-ab38-c60502f6a718.png)
+
+Whats good
+
+![pasted image 0](https://user-images.githubusercontent.com/110428822/183179895-dff4eafc-1e56-48ce-afaa-a0c6399f0309.png)
+
+Whats good
+
+![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183183324-b08c11ec-672a-498f-a2cf-a4a42db36886.png)
+
+Whats good
+
+![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/183186130-df86e44d-33b8-4cab-ab5f-61860a251ca3.png)
+
+Whats good
+
+![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183187809-cfc2d6d7-49f7-4713-b45c-da28b552115e.png)
+
+Whats good
+
+![Screenshot 2022-08-03 135837](https://user-images.githubusercontent.com/110428822/183188406-0c8c6326-92b1-4b35-8267-fbe9edd51cc7.png)
+
+Whats good
