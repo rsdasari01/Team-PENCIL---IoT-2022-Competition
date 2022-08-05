@@ -22,9 +22,9 @@ Paired with the DFPlayerMini is a 5W 4Ohm speaker from Logitech. Taken from a pa
 ### The LEDs
 ![IMG_4408](https://user-images.githubusercontent.com/80157888/182253741-e4c3c389-4307-4755-b65d-f25eb8e1de3d.jpeg)
 We used some WS2812B LEDs in order to display a color that would indicate the status of the home. These LEDS are super bright and use the full color spectrum! Integration is super simple via the use of the FastLED library which allows us to control the LEDs with a few simple commands.
-### Data Collection
+## Data Collection
 Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect dtat of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
-# Excel Graphs
+### Excel Graphs
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
 
 For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. For the normal room temperature atmosphere we see after the first step the gas resistivity spikes up majorilly but, gradually decreases from 7000/8000 to 2000/3000 which then after the values decrease to around 200 and continue to decrease until step 8, which then they increase to 100. After doing many experiences we figured that the gases in each room differ a lot so we decide to record values in the same room. The purpose of the Hp-354 normal readings is to compare them to the other gasses and other heat profiles. It also known as the 'constant' reading.
@@ -53,4 +53,4 @@ The difference between Hp-411's values for bleach and Hp-354's values for bleach
 
 Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, but it has lower values than both. Hp-411 fire values were somewhat easier to record as after many trial with the Hp-354 fire values, we got the hang of it.
 
-# Python Graphs
+### Python Graphs
