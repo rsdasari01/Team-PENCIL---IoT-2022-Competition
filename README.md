@@ -24,6 +24,9 @@ Paired with the DFPlayerMini is a 5W 4Ohm speaker from Logitech. Taken from a pa
 We used some WS2812B LEDs in order to display a color that would indicate the status of the home. These LEDS are super bright and use the full color spectrum! Integration is super simple via the use of the FastLED library which allows us to control the LEDs with a few simple commands.
 ## Data Collection
 Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect data of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
+
+## Demo
+
 ### Excel Graphs
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
 
@@ -77,3 +80,5 @@ These are our python graphs and they were helpful to somewhat until we found out
 ![Screenshot 2022-08-03 135837](https://user-images.githubusercontent.com/110428822/183188406-0c8c6326-92b1-4b35-8267-fbe9edd51cc7.png)
 
 
+## Conclusion
+In conclusion, we are very proud of our device we made, as we also had a lot of fun making it. This device in the real world would be very helpful and will look aesthetic and pleasing.
