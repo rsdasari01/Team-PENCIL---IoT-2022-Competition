@@ -23,7 +23,7 @@ Paired with the DFPlayerMini is a 5W 4Ohm speaker from Logitech. Taken from a pa
 ![IMG_4408](https://user-images.githubusercontent.com/80157888/182253741-e4c3c389-4307-4755-b65d-f25eb8e1de3d.jpeg)
 We used some WS2812B LEDs in order to display a color that would indicate the status of the home. These LEDS are super bright and use the full color spectrum! Integration is super simple via the use of the FastLED library which allows us to control the LEDs with a few simple commands.
 ### Data Collection
-Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect dtat of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. 
+Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect dtat of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
 ![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/182686444-dcadcb55-4f79-48ac-8820-647a7fdab9e6.png)
 ![pasted image 0](https://user-images.githubusercontent.com/110428822/182686543-4df9b7d9-b759-4ca1-aede-1d7a8ede1c3b.png)
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
@@ -36,20 +36,20 @@ For the Hp-354 we saw a similar trend in all of the gasses the only difference w
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690384-f9c48e31-42d3-4899-a970-e61183c14f8b.png">
 
-For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. The difference
+For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. The difference in the gas values and the bleach and normal values is that it's significantly smaller and it's smaller than the fire values as well even though you could assume that they would be pretty much the same. In summary, the gas values were the most unique to us.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690454-f659a307-3ba5-4a50-9804-883f96e7e804.png">
 
-We used this image
+The fire has higher values than the gas but lesser values than the bleach, so it's basically in the middle between these two. Measuring the fire was quite difficult because we had to start a fire, then choke it, then record the values using the leftover smoke, but the smoke would diminish pretty quick, so it would be hard for the sensor to read proper values, so it took multiple tries.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690651-4b36ec2a-1949-4c6d-9410-8b3f983b9183.png">
 
-We used this image
+The heat profile Hp-411 was different than Hp-354 because most of the steps in Hp-411 were a lot less and significant than Hp-354's steps.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690713-3952e303-23fb-45b4-aa78-636890895f46.png">
 
-We used this image
+The difference between Hp-411's values for bleach and Hp-354's values for bleach was that Hp-411 had lower values, but Hp-411's values for bleach was higher than the normal Hp-411. Hp-411 bleach was a bit more consistent than Hp-354 bleach. This might have happened because of environmental changes.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690899-e512b0ab-6c38-4fbd-a077-a9d533f116c7.png">
 
-We used this image
+Hp-411
