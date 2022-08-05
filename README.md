@@ -54,26 +54,26 @@ The difference between Hp-411's values for bleach and Hp-354's values for bleach
 Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, but it has lower values than both. Hp-411 fire values were somewhat easier to record as after many trial with the Hp-354 fire values, we got the hang of it.
 
 ### Python Graphs
+These are our python graphs and they were helpful to somewhat until we found out that the graphs weren't as helpful to us as we needed them so we thought we shouldn't analyze them.
+#### HP-354
 ![Screenshot 2022-08-01 150747](https://user-images.githubusercontent.com/110428822/183178385-a39f93a1-03f8-4f25-ab38-c60502f6a718.png)
 
-Whats good
 
 ![pasted image 0](https://user-images.githubusercontent.com/110428822/183179895-dff4eafc-1e56-48ce-afaa-a0c6399f0309.png)
 
-Whats good
+
+
+![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/183186130-df86e44d-33b8-4cab-ab5f-61860a251ca3.png)
+#### HP-411
+
 
 ![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183183324-b08c11ec-672a-498f-a2cf-a4a42db36886.png)
 
-Whats good
-
-![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/183186130-df86e44d-33b8-4cab-ab5f-61860a251ca3.png)
-
-Whats good
 
 ![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183187809-cfc2d6d7-49f7-4713-b45c-da28b552115e.png)
 
-Whats good
+
 
 ![Screenshot 2022-08-03 135837](https://user-images.githubusercontent.com/110428822/183188406-0c8c6326-92b1-4b35-8267-fbe9edd51cc7.png)
 
-Whats good
+
