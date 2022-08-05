@@ -8,12 +8,24 @@
 #include <WiFi.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
+#include "Arduino.h"
+#include "DFRobotDFPlayerMini.h"
+#include <FastLED.h>
 
 //Define SPI Pins for TFT Screen
 #define TFT_CS        5
 #define TFT_RST        4 // Or set to -1 and connect to Arduino RESET pin
 #define TFT_DC         2
 #define SEALEVELPRESSURE_HPA (1013.25)
+
+#define LED_PIN     13
+#define NUM_LEDS    16
+#define BRIGHTNESS  64
+#define LED_TYPE    WS2811
+#define COLOR_ORDER GRB
+CRGB leds[NUM_LEDS];
+
+#define UPDATES_PER_SECOND 100
 
 // For 1.44" and 1.8" TFT with ST7735 use:
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
@@ -27,6 +39,11 @@ const char* password = "Sw33thome264";
 //Initialize more NTP Stuff
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
+
+//Initialize the DFPlayerMini stuff
+HardwareSerial mySoftwareSerial(1); // RX, TX
+DFRobotDFPlayerMini myDFPlayer;
+void printDetail(uint8_t type, int value);
 
 //Initialize all the strings for NTPTime
 String NTPTime;
@@ -46,11 +63,17 @@ float Step8;
 float Step9;
 float Step10;
 
+int count;
+
 void setup(void) {
+  mySoftwareSerial.begin(9600, 16, 17);
   Serial.begin(115200);
   //Initialize TFT Screen
   tft.initR(INITR_GREENTAB);
   initializeNTP();
+  initializeDFPlayerMini();
+  initializeLEDs();
+  initializeBMESensor();
   startupScreen();
   delay(10000);
   tft.fillScreen(ST77XX_BLACK);
@@ -58,7 +81,9 @@ void setup(void) {
 
 void loop() {
   printTime();
-  delay(1000);
+  detectGases();
+  measureGasResistance();
+  tft.fillScreen(ST77XX_BLACK);
 }
 
 void startupScreen() {
@@ -99,6 +124,8 @@ void initializeNTP() {
 
 
 void initializeBMESensor() {
+  while (!Serial);
+  Serial.println(F("BME680 test"));
   if (!bme.begin()) {
     Serial.println("Could not find a valid BME680 sensor, check wiring!");
     while (1);
@@ -111,6 +138,30 @@ void initializeBMESensor() {
   bme.setIIRFilterSize(BME680_FILTER_SIZE_3);
 }
 
+void initializeDFPlayerMini() {
+  mySoftwareSerial.begin(9600, SERIAL_8N1, 16, 17);  // speed, type, RX, TX
+
+  Serial.println();
+  Serial.println(F("DFRobot DFPlayer Mini Demo"));
+  Serial.println(F("Initializing DFPlayer ... (May take 3~5 seconds)"));
+
+  if (!myDFPlayer.begin(mySoftwareSerial)) {  //Use softwareSerial to communicate with mp3.
+    Serial.println(myDFPlayer.readType(), HEX);
+    Serial.println(F("Unable to begin:"));
+    Serial.println(F("1.Please recheck the connection!"));
+    Serial.println(F("2.Please insert the SD card!"));
+    while (true) {
+      delay(0); // Code to compatible with ESP8266 watch dog.
+    }
+  }
+  Serial.println(F("DFPlayer Mini online."));
+
+}
+
+void initializeLEDs() {
+  FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
+  FastLED.setBrightness(BRIGHTNESS);
+}
 void printTime() {
   timeClient.update();
   NTPTime = timeClient.getFormattedTime();
@@ -135,40 +186,44 @@ void printTime() {
   }
   else {
     NTPHour = String(Hour);
-  }  
- 
+  }
+
   Serial.println(NTPHour);
   String FormattedNTPTime = NTPHour + ":" + NTPMinute + AMPM;
   Serial.println(FormattedNTPTime);
   tft.fillScreen(ST77XX_BLACK);
-  tft.setCursor(23, 130);
+  tft.setCursor(23, 20);
   tft.setTextColor(ST77XX_CYAN);
   tft.setTextSize(2);
   tft.print(FormattedNTPTime);
 }
 
 void measureGasResistance() {
-   //Equivalent to HP-354
+  if (! bme.performReading()) {
+    Serial.println("Failed to perform reading :(");
+    return;
+  }
+  //Equivalent to HP-354
   bme.setGasHeater(320, 700);
-  Step1 = bme.readGas()/1000;
+  Step1 = bme.readGas() / 1000;
   bme.setGasHeater(100, 280);
-  Step2 = bme.readGas()/1000;
+  Step2 = bme.readGas() / 1000;
   bme.setGasHeater(100, 1400);
-  Step3 = bme.readGas()/1000;
+  Step3 = bme.readGas() / 1000;
   bme.setGasHeater(100, 2200);
-  Step4 = bme.readGas()/1000;
+  Step4 = bme.readGas() / 1000;
   bme.setGasHeater(200, 700);
-  Step5 = bme.readGas()/1000;
+  Step5 = bme.readGas() / 1000;
   bme.setGasHeater(200, 700);
-  Step6 = bme.readGas()/1000;
+  Step6 = bme.readGas() / 1000;
   bme.setGasHeater(200, 700);
-  Step7 = bme.readGas()/1000;
+  Step7 = bme.readGas() / 1000;
   bme.setGasHeater(320, 700);
-  Step8 = bme.readGas()/1000;
+  Step8 = bme.readGas() / 1000;
   bme.setGasHeater(320, 700);
-  Step9 = bme.readGas()/1000;
+  Step9 = bme.readGas() / 1000;
   bme.setGasHeater(320, 700);
-  Step10 = bme.readGas()/1000;
+  Step10 = bme.readGas() / 1000;
   Serial.print("Step 1:");
   Serial.println(Step1);
   Serial.print("Step 2:");
@@ -192,7 +247,172 @@ void measureGasResistance() {
   Serial.println(" ");
 }
 
-void detectGases(){
-  if (165 <= Step1 <= 170){
+void detectGases() {
+  count = 1;
+  //Gas Detection
+  if ((0 <= Step1) && (Step1 <= 58)) {
+    if ((0 <= Step2) && (Step2 <= 260)) {
+      if ((0 <= Step3) && (Step3 <= 230)) {
+        if ((0 <= Step4) && (Step4 <= 250)) {
+          if ((10 <= Step5) && (Step5 <= 50)) {
+            if ((0 <= Step6) && (Step6 <= 50)) {
+              if ((0 <= Step7) && (Step7 <= 50)) {
+                if ((0 <= Step8) && (Step8 <= 53)) {
+                  if ((0 <= Step9) && (Step9 <= 53)) {
+                    if ((0 <= Step10) && (Step10 <= 53)) {
+                      myDFPlayer.volume(30);
+                      myDFPlayer.play(1);
+                      myDFPlayer.volume(30);
+                      myDFPlayer.play(3);
+                      tft.setCursor(23, 50);
+                      tft.setTextColor(ST77XX_CYAN);
+                      tft.setTextSize(2);
+                      tft.print("Status: ");
+                      tft.setCursor(37, 80);
+                      tft.println("GAS");
+                      tft.setCursor(35, 100);
+                      tft.println("LEAK");
+                      tft.setCursor(15, 120);
+                      tft.println("DETECTED");
+                      count = 0;
+                      FastLED.show();
+                      Serial.println("Gas Leak Detected");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
+  //Fire Detection
+  else if ((20 <= Step1) && (Step1 <= 40)) {
+    if ((400 <= Step2) && (Step2 <= 650)) {
+      if ((300 <= Step3) && (Step3 <= 450)) {
+        if ((200 <= Step4) && (Step4 <= 350)) {
+          if ((10 <= Step5) && (Step5 <= 30)) {
+            if ((10 <= Step6) && (Step6 <= 30)) {
+              if ((10 <= Step7) && (Step7 <= 20)) {
+                if ((8 <= Step8) && (Step8 <= 16)) {
+                  if ((10 <= Step9) && (Step9 <= 25)) {
+                    if ((15 <= Step10) && (Step10 <= 30)) {
+                      myDFPlayer.volume(30);
+                      myDFPlayer.play(1);
+                      myDFPlayer.volume(30);
+                      myDFPlayer.play(3);
+                      tft.setCursor(23, 50);
+                      tft.setTextColor(ST77XX_CYAN);
+                      tft.setTextSize(2);
+                      tft.print("Status: ");
+                      tft.setCursor(35, 80);
+                      tft.println("FIRE");
+                      tft.setCursor(15, 100);
+                      tft.println("DETECTED");
+                      fill_solid(leds, NUM_LEDS, CRGB::Red);
+                      count = 2;
+                      FastLED.show();
+                      Serial.println("Fire Detected");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Bleach Detection
+  if ((170 <= Step1) && (Step1 <= 180)) {
+    if ((11100 <= Step2) && (Step2 <= 11300)) {
+      if ((4900 <= Step3) && (Step3 <= 5100)) {
+        if ((3400 <= Step4) && (Step4 <= 3600)) {
+          if ((230 <= Step5) && (Step5 <= 250)) {
+            if ((200 <= Step6) && (Step6 <= 230)) {
+              if ((160 <= Step7) && (Step7 <= 190)) {
+                if ((100 <= Step8) && (Step8 <= 130)) {
+                  if ((140 <= Step9) && (Step9 <= 170)) {
+                    if ((150 <= Step10) && (Step10 <= 180)) {
+                      myDFPlayer.volume(30);
+                      myDFPlayer.play(1);
+                      myDFPlayer.volume(30);
+                      myDFPlayer.play(2);
+                      tft.setCursor(23, 50);
+                      tft.setTextColor(ST77XX_CYAN);
+                      tft.setTextSize(2);
+                      tft.print("Status: ");
+                      tft.setCursor(25, 80);
+                      tft.println("BLEACH");
+                      tft.setCursor(35, 100);
+                      tft.println("LEAK");
+                      tft.setCursor(15, 120);
+                      tft.println("DETECTED");
+                      fill_solid(leds, NUM_LEDS, CRGB::Red);
+                      count = 3;
+                      FastLED.show();
+                      Serial.println("Bleach Leak Detected");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  else {
+
+    if (count == 1) {
+      fill_solid(leds, NUM_LEDS, CRGB::Green);
+      FastLED.show();
+      Serial.println("everything is normal");
+      tft.setCursor(23, 50);
+      tft.setTextColor(ST77XX_CYAN);
+      tft.setTextSize(2);
+      tft.print("Status: ");
+      tft.setCursor(25, 80);
+      tft.println("Normal");
+    }
+    else if (count == 0) {
+      fill_solid(leds, NUM_LEDS, CRGB::Red);
+      FastLED.show();
+      tft.fillScreen(ST77XX_BLACK);
+      tft.println("GAS");
+      tft.setCursor(35, 100);
+      tft.println("LEAK");
+      tft.setCursor(15, 120);
+      tft.println("DETECTED");
+    }
+    else if (count == 2) {
+      tft.setCursor(23, 50);
+      tft.setTextColor(ST77XX_CYAN);
+      tft.setTextSize(2);
+      tft.print("Status: ");
+      tft.setCursor(35, 80);
+      tft.println("FIRE");
+      tft.setCursor(15, 100);
+      tft.println("DETECTED");
+      fill_solid(leds, NUM_LEDS, CRGB::Red);
+      FastLED.show();
+    }
+    else if (count == 3) {
+      tft.setCursor(23, 50);
+      tft.setTextColor(ST77XX_CYAN);
+      tft.setTextSize(2);
+      tft.print("Status: ");
+      tft.setCursor(25, 80);
+      tft.println("BLEACH");
+      tft.setCursor(35, 100);
+      tft.println("LEAK");
+      tft.setCursor(15, 120);
+      tft.println("DETECTED");
+      fill_solid(leds, NUM_LEDS, CRGB::Red);
+      FastLED.show();
+    }
+  }
+}
