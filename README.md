@@ -39,11 +39,11 @@ For the normal room temperature atmosphere, we saw after the first step the gas 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690124-f2b63ef4-6e42-4ca4-aeed-609cad2960e0.png">
 
-For the Bleach the trend and values are very similar to the normal readings, the only difference being that the readings for the bleach is slightly higher when compared to the normal values, which would mean we would have to keep our thresholds for the bleach very small in order to prevent overlapping with the normal values and causing a false alarm.
+For the bleach the trend and values are very similar to the normal readings, the only difference being that the readings for the bleach is slightly higher when compared to the normal values, which would mean we would have to keep our thresholds for the bleach very small in order to prevent overlapping with the normal values and causing a false alarm. The jump from step 2 to step 3 was much steeper for the bleach compared to the normal values. 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690384-f9c48e31-42d3-4899-a970-e61183c14f8b.png">
 
-The difference in the gas values when compared with the bleach and normal values is that it's significantly smaller which means our thresholds were able to be a little more lenient. Another interesting thing we found is these values were actually higher than values for the fire, which we didnt expect as we thought they would be incredibly similar. 
+The difference in the gas values when compared with the bleach and normal values is that it's significantly smaller which means our thresholds were able to be a little more lenient. Another interesting thing we found is these values were actually higher than values for the fire, which we didnt expect as we thought they would be incredibly similar. The jump from step 2 to step 3 was also much smaller compared to the bleach.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690454-f659a307-3ba5-4a50-9804-883f96e7e804.png">
 
