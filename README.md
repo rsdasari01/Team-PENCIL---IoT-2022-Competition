@@ -3,30 +3,6 @@
 The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home and is designed to sharpen the homeowners senses. This is for homeowners to let them know if there is a leak or fire in their house.
 ## Our Plan
 Our plan was to make a device that can detect harmful substances if they are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the programming, we started running tests for data. After all of that we finished programming the speaker and lights and ran our last test for data.
-### Team Log
-6/23 Brainstorming Session,
-6/24 Cadding and 3D Printing,
-6/25 3D Printing,
-6/26 Sanding and Assembling Most of The Case,
-6/27 Programming and Working on Case,
-6/28 Planning,
-6/30 Unpackaging and Testing New parts,
-7/1 Still Testing out New Parts,
-7/5 Programming Speaker and OLED Screen,
-7/20 Assemble Case and Coding,
-7/21 - 7/30 Collecting Data and Coding,
-7/30 - 8/5 Analyzing Finalizing Code Testing and Presentation,
-![Screenshot 2022-08-05 210120](https://user-images.githubusercontent.com/98428580/183227469-a11804b6-c3be-4e60-85f3-852a2520284d.png)
-![image](https://user-images.githubusercontent.com/98428580/183227490-f8052c6f-182c-469b-82a8-d70bc6dd47f0.png)
-![image](https://user-images.githubusercontent.com/98428580/183227501-fbe99687-092a-4104-a464-887a76f995d4.png)
-![image](https://user-images.githubusercontent.com/98428580/183227516-8156348a-a9de-4fa4-96b5-cd3dd4f625c3.png)
-![image](https://user-images.githubusercontent.com/98428580/183227531-90be5800-e041-4f11-b6cd-cc001f225037.png)
-![image](https://user-images.githubusercontent.com/98428580/183227538-a7fd7636-bede-479e-9291-3180f33756ff.png)
-![image](https://user-images.githubusercontent.com/98428580/183227546-d7e871d3-f827-4d3a-9c3f-98c9b0d4e6ff.png)
-![image](https://user-images.githubusercontent.com/98428580/183227553-76b17616-8a50-4151-8bed-ce653f0a0cb6.png)
-![image](https://user-images.githubusercontent.com/98428580/183227561-30330466-e7a8-462f-bb58-271810b7bc7d.png)
-
-
 ## The Team 
 ![IMG_4538](https://user-images.githubusercontent.com/80157888/183225542-656aaa66-81d4-4144-b4ba-264d6ad92927.JPG)
 In order to make this device, we had to have a team that was knowledgable as well as innovative and helpful, qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also handled most of the Arduino code. 
@@ -49,28 +25,29 @@ We used some WS2812B LEDs in order to display a color that would indicate the st
 
 ## The Overall Circuit
 For times sake, we were unable to create a full blown circuit diagram but below are picture of the circuit.
+
 ![IMG_4546](https://user-images.githubusercontent.com/80157888/183226671-86e9cd09-3144-45f2-9a52-09c77b40a09a.JPG)
 ![IMG_4547](https://user-images.githubusercontent.com/80157888/183226672-5f714dbe-1c49-4fc3-9041-252ee2a79e49.JPG)
 
 ## The Data Collection
-Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect data of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
+Our sensor detects different gases by using thresholds and boundaries that we created for the gas resistivity so when the values fell under these boundaries/threseholds it would run the alert code. To determine these thresholds and boundaries we have to collect data of the gases and create the thresholds after analyzing the data. We used two heater profiles, HP-354 and HP-411, and we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emitted from fire, the smell emitted from gasoline, and the smell emitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gases as they are the harmful to a household due to fumes. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. 
 
 ### Excel Graphs
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
 
-For the Hp-354 we saw a similar trend in all of the gases the only difference was the amount of gas resistivity. For the normal room temperature atmosphere we see after the first step the gas resistivity spikes up majorilly but, gradually decreases from 7000/8000 to 2000/3000 which then after the values decrease to around 200 and continue to decrease until step 8, which then they increase to 100. After doing many experiences we figured that the gases in each room differ a lot so we decide to record values in the same room. The purpose of the Hp-354 normal readings is to compare them to the other gasses and other heat profiles. It also known as the 'constant' reading.
+For the normal room temperature atmosphere, we saw after the first step the gas resistivity spikes up majorly but gradually decreases from 7000/8000 to 2000/3000 which then after the values decrease to around 200 and continue to decrease until step 8, which then they increase to 100. After doing many experiments we figured that the gases in each room differ a lot so we decide to record values in the same room. The purpose of the Hp-354 normal readings is to compare them to the other gases and other heat profiles. It also known as the 'constant' or 'independant' reading.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690124-f2b63ef4-6e42-4ca4-aeed-609cad2960e0.png">
 
-For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. For the Bleach the trend and values are very similar to the normal readings, the only difference being that the readings for the gas resistivity is slightly higher when compared to the normal values, which would mean we would have to keep our thresholds for the bleach to be very small in order to prevent overlapping with the normal values.
+For the Bleach the trend and values are very similar to the normal readings, the only difference being that the readings for the bleach is slightly higher when compared to the normal values, which would mean we would have to keep our thresholds for the bleach very small in order to prevent overlapping with the normal values and causing a false alarm.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690384-f9c48e31-42d3-4899-a970-e61183c14f8b.png">
 
-For the Hp-354 we saw a similar trend in all of the gasses the only difference was the amount of gas resistivity. The difference in the gas values and the bleach and normal values is that it's significantly smaller and it's smaller than the fire values as well even though you could assume that they would be pretty much the same. In summary, the gas values were the most unique to us.
+The difference in the gas values when compared with the bleach and normal values is that it's significantly smaller which means our thresholds were able to be a little more lenient. Another interesting thing we found is these values were actually higher than values for the fire, which we didnt expect as we thought they would be incredibly similar. 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690454-f659a307-3ba5-4a50-9804-883f96e7e804.png">
 
-The fire has higher values than the gas but lesser values than the bleach, so it's basically in the middle between these two. Measuring the fire was quite difficult because we had to start a fire, then choke it, then record the values using the leftover smoke, but the smoke would diminish pretty quick, so it would be hard for the sensor to read proper values, so it took multiple tries.
+The fire has higher values compared to the gas but lower values compared to the bleach, so it's basically in the middle of these two. Measuring the fire was quite difficult because we had to start the fire, then choke it, then record the values using the leftover smoke, but the smoke would diminish pretty quick, so it would be hard for the sensor to read proper values, so it took multiple tries for us to get some reliable data we were able to use. 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690651-4b36ec2a-1949-4c6d-9410-8b3f983b9183.png">
 
@@ -135,6 +112,9 @@ For the code, we decided to split up the code into several function that could b
 https://user-images.githubusercontent.com/80157888/183226086-66d02789-4ec0-4276-b159-bb05ae5ba8f8.mp4
 
 https://user-images.githubusercontent.com/80157888/183227075-c47007af-25b0-4260-bb42-b11bf8e5b506.mp4
+
+## The Challenges
+One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one. Another issue is that this happened towards the end of the competition, so a lot of the testing had to be redone very quickly and it became quite challenging to work that fast. In the end, we made plans on what to do each day which helped us pace ourselves well enough to have this product finished on time. 
 
 ## The Conclusion
 In conclusion, we are very proud of our device we made, as we also had a lot of fun making it. This device in the real world would be very helpful and will look aesthetic and pleasing.
