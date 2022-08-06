@@ -104,8 +104,13 @@ For the code, we decided to split up the code into several function that could b
 
 ## Testing 
 
-##Demo
 https://user-images.githubusercontent.com/80157888/183226086-66d02789-4ec0-4276-b159-bb05ae5ba8f8.mp4
+
+![IMG_1141](https://user-images.githubusercontent.com/110428822/183226588-3ffb61d8-7824-491e-98ca-3bd09d61fb29.jpg)
+
+![IMG_1142](https://user-images.githubusercontent.com/110428822/183226595-ca953d5c-64b5-4242-a930-4e66b16ae6be.jpg)
+
+![IMG_1140](https://user-images.githubusercontent.com/110428822/183226611-fdaf2271-1dde-4e2a-87fa-557c8edbb145.jpg)
 
 ## Conclusion
 In conclusion, we are very proud of our device we made, as we also had a lot of fun making it. This device in the real world would be very helpful and will look aesthetic and pleasing.
