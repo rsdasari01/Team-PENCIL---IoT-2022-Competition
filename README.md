@@ -47,45 +47,40 @@ The difference in the gas values when compared with the bleach and normal values
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690454-f659a307-3ba5-4a50-9804-883f96e7e804.png">
 
-The fire has higher values compared to the gas but lower values compared to the bleach, so it's basically in the middle of these two. Measuring the fire was quite difficult because we had to start the fire, then choke it, then record the values using the leftover smoke, but the smoke would diminish pretty quick, so it would be hard for the sensor to read proper values, so it took multiple tries for us to get some reliable data we were able to use. 
+The fire has higher values compared to the gas but lower values compared to the bleach, so it's basically in the middle of these two. Measuring the fire was quite difficult because we had to start the fire, then choke it, then record the values using the leftover smoke, but the smoke would diminish pretty quick, so it would be hard for the sensor to read proper values, so it took multiple tries for us to get some reliable data we were able to use. The drops from step 2 to step 3 and step 3 to step 4 were also steeper than most of the other gases. 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690651-4b36ec2a-1949-4c6d-9410-8b3f983b9183.png">
 
-The heat profile Hp-411 was different than Hp-354 because most of the steps in Hp-411 were a lot less and significant than Hp-354's steps.
+The heat profile HP-411 was significantly more different when compared HP-354 due to its higher starting heat and lower general heat values. Therefore the normal graph for HP-411 has a larger drop from step 1 to step 2 compared to HP-354.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690713-3952e303-23fb-45b4-aa78-636890895f46.png">
 
-The difference between Hp-411's values for bleach and Hp-354's values for bleach was that Hp-411 had lower values, but Hp-411's values for bleach was higher than the normal Hp-411. Hp-411 bleach was a bit more consistent than Hp-354 bleach. This might have happened because of environmental changes.
+The difference between Hp-411's values for bleach and Hp-354's values for bleach was that Hp-411 had lower values, but Hp-411's values for bleach was higher than the normal Hp-411. Hp-411 bleach was a bit more consistent than Hp-354 bleach. This might have happened because of environmental changes as well as the lower general heats that provided more consistency for measurenments. 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690899-e512b0ab-6c38-4fbd-a077-a9d533f116c7.png">
 
-Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, but it has lower values than both. Hp-411 fire values were somewhat easier to record as after many trial with the Hp-354 fire values, we got the hang of it.
+Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, but it has lower values than both. Hp-411 fire values were somewhat easier to record as after many trial with the Hp-354 fire values, we got the hang of it. The scale of the fire was significantly lower although when viewed on its own it looks very similar to the bleach and normal graphs.
+
+(*Note - A main trend found throughout the heater profiles was the scale changed between the gases but not as much the general line trend)
 
 ### Python Graphs
 These are our python graphs and they were helpful to somewhat until we found out that the graphs weren't as helpful to us as we needed them so we thought it was unecessary analyze them.
 #### HP-354
 ![Screenshot 2022-08-01 150747](https://user-images.githubusercontent.com/110428822/183178385-a39f93a1-03f8-4f25-ab38-c60502f6a718.png)
 
-
 ![pasted image 0](https://user-images.githubusercontent.com/110428822/183179895-dff4eafc-1e56-48ce-afaa-a0c6399f0309.png)
 
-
-
 ![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/183186130-df86e44d-33b8-4cab-ab5f-61860a251ca3.png)
+
 #### HP-411
-
-
 ![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183183324-b08c11ec-672a-498f-a2cf-a4a42db36886.png)
 
-
 ![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183187809-cfc2d6d7-49f7-4713-b45c-da28b552115e.png)
-
-
 
 ![Screenshot 2022-08-03 135837](https://user-images.githubusercontent.com/110428822/183188406-0c8c6326-92b1-4b35-8267-fbe9edd51cc7.png)
 
 ## Code
-For the code, we decided to split up the code into several function that could be called when needed for simplicities sake. Below is an explanation of the function of each function. 
+For the code, we decided to split up the code into several functions that could be called when needed for simplicities sake. Below is an explanation of the functions of each function. 
 
 (Line 1 - 66 is just libraries and definitions of variables for the code)
 
@@ -105,7 +100,7 @@ For the code, we decided to split up the code into several function that could b
 
 `void detectGases()` - This function utilizes the previous heater profile values stored in those variables in order to detect one of three different types of household hazards -- a fire, a bleach leak, or a gasoline leak. Once it detects a hazard, the function will print the hazard on the screen while also changing the lights red and also playing a loud noise to alert the homeowner. In the case a hazard is not present, however, the screen will print "normal" and nothing will sound. It gets called during `void loop()`.
 
-## The Testing 
+## The Development 
 
 ## The Demo and Final Product
 
