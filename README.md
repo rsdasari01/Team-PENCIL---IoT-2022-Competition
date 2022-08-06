@@ -25,6 +25,7 @@ We used some WS2812B LEDs in order to display a color that would indicate the st
 
 ## The Overall Circuit
 For times sake, we were unable to create a full blown circuit diagram but below are picture of the circuit.
+
 ![IMG_4546](https://user-images.githubusercontent.com/80157888/183226671-86e9cd09-3144-45f2-9a52-09c77b40a09a.JPG)
 ![IMG_4547](https://user-images.githubusercontent.com/80157888/183226672-5f714dbe-1c49-4fc3-9041-252ee2a79e49.JPG)
 
