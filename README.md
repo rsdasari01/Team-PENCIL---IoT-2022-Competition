@@ -133,7 +133,7 @@ https://user-images.githubusercontent.com/80157888/183227075-c47007af-25b0-4260-
 
 ![IMG_1140](https://user-images.githubusercontent.com/110428822/183228266-e717b72e-7297-4393-a9ff-ff0072fac188.jpg)
 
-![IMG_1141](htt![IMG_1142](https://user-images.githubusercontent.com/110428822/183228274-d330e679-f2fd-49d3-af7b-70c6bbcbb968.jpg)
+![IMG_1141](https://user-images.githubusercontent.com/110428822/183228274-d330e679-f2fd-49d3-af7b-70c6bbcbb968.jpg)
 
 
 ## The Challenges
