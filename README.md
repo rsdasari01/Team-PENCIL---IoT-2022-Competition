@@ -3,7 +3,7 @@
 The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home and is designed to sharpen the homeowners senses. This is for homeowners to let them know if there is a leak or fire in their house.
 ## Our Plan
 Our plan was to make a device that can detect harmful substances if they are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the programming, we started running tests for data. After all of that we finished programming the speaker and lights and ran our last test for data.
-### Team Log
+### The Team Log
 6/23 Brainstorming Session
 
 6/24 Cadding and 3D Printing
