@@ -3,6 +3,30 @@
 The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home and is designed to sharpen the homeowners senses. This is for homeowners to let them know if there is a leak or fire in their house.
 ## Our Plan
 Our plan was to make a device that can detect harmful substances if they are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the programming, we started running tests for data. After all of that we finished programming the speaker and lights and ran our last test for data.
+### Team Log
+6/23 Brainstorming Session...
+6/24 Cadding and 3D Printing
+6/25 3D Printing
+6/26 Sanding and Assembling Most of The Case
+6/27 Programming and Working on Case
+6/28 Planning
+6/30 Unpackaging and Testing New parts
+7/1 Still Testing out New Parts
+7/5 Programming Speaker and OLED Screen
+7/20 Assemble Case and Coding
+7/21 - 7/30 Collecting Data and Coding
+7/30 - 8/5 Analyzing, Finalizing Code, Testing, and Presentation
+![Screenshot 2022-08-05 210120](https://user-images.githubusercontent.com/98428580/183227469-a11804b6-c3be-4e60-85f3-852a2520284d.png)
+![image](https://user-images.githubusercontent.com/98428580/183227490-f8052c6f-182c-469b-82a8-d70bc6dd47f0.png)
+![image](https://user-images.githubusercontent.com/98428580/183227501-fbe99687-092a-4104-a464-887a76f995d4.png)
+![image](https://user-images.githubusercontent.com/98428580/183227516-8156348a-a9de-4fa4-96b5-cd3dd4f625c3.png)
+![image](https://user-images.githubusercontent.com/98428580/183227531-90be5800-e041-4f11-b6cd-cc001f225037.png)
+![image](https://user-images.githubusercontent.com/98428580/183227538-a7fd7636-bede-479e-9291-3180f33756ff.png)
+![image](https://user-images.githubusercontent.com/98428580/183227546-d7e871d3-f827-4d3a-9c3f-98c9b0d4e6ff.png)
+![image](https://user-images.githubusercontent.com/98428580/183227553-76b17616-8a50-4151-8bed-ce653f0a0cb6.png)
+![image](https://user-images.githubusercontent.com/98428580/183227561-30330466-e7a8-462f-bb58-271810b7bc7d.png)
+
+
 ## The Team 
 ![IMG_4538](https://user-images.githubusercontent.com/80157888/183225542-656aaa66-81d4-4144-b4ba-264d6ad92927.JPG)
 In order to make this device, we had to have a team that was knowledgable as well as innovative and helpful, qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also handled most of the Arduino code. 
@@ -25,7 +49,6 @@ We used some WS2812B LEDs in order to display a color that would indicate the st
 
 ## The Overall Circuit
 For times sake, we were unable to create a full blown circuit diagram but below are picture of the circuit.
-
 ![IMG_4546](https://user-images.githubusercontent.com/80157888/183226671-86e9cd09-3144-45f2-9a52-09c77b40a09a.JPG)
 ![IMG_4547](https://user-images.githubusercontent.com/80157888/183226672-5f714dbe-1c49-4fc3-9041-252ee2a79e49.JPG)
 
