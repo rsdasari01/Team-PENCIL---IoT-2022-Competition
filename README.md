@@ -1,9 +1,10 @@
 # Team PENCIL presents
 ## The Sharpener
 The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, and fires inside a home! This is for homeowners to let them know if there is a leak or fire in their house.
-## Timeline
+## Our Plan
 Our plan was to make a device that can detect harmful substances if they are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the programming, we started running tests for data. After all of that we finished programming the speaker and lights and ran our last test for data.
 ## The Team 
+![IMG_4538](https://user-images.githubusercontent.com/80157888/183225542-656aaa66-81d4-4144-b4ba-264d6ad92927.JPG)
 In order to make this device, we had to have a team that was knowledgable as well as innovative and helpful, ##qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also handled most of the Arduino code. 
 ## The Hardware
 This device contains a plethora of hardware parts that are required to make it the best that it can be!
@@ -25,7 +26,7 @@ We used some WS2812B LEDs in order to display a color that would indicate the st
 
 ## Demo
 
-## Data Collection + Data Analysis
+## Data Collection
 Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect data of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
 
 ### Excel Graphs
@@ -47,7 +48,7 @@ The fire has higher values than the gas but lesser values than the bleach, so it
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690651-4b36ec2a-1949-4c6d-9410-8b3f983b9183.png">
 
-The heat profile Hp-411 was different than Hp-354 because most of the steps in Hp-411 were a lot less and significant than Hp-354's steps. But the trend for this heat profile was interesting because instead of starting of with low values it starts of with high values, which also one reason we didnt use this heat profile. Starting it with high values would make the heat profile sensor's values for that to be somewhat inaccurate because that is a big range and it gives the sensor less room for a warm up. Another reason we didn't use this heat profile is because after the first step the rest of the values are really low which make it difficult to establish threseholds if the main distinguishing values is the first step.
+The heat profile Hp-411 was different than Hp-354 because most of the steps in Hp-411 were a lot less and significant than Hp-354's steps.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690713-3952e303-23fb-45b4-aa78-636890895f46.png">
 
@@ -59,9 +60,7 @@ Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, b
 
 ### Python Graphs
 These are our python graphs and they were helpful to somewhat until we found out that the graphs weren't as helpful to us as we needed them so we thought we shouldn't analyze them.
-#### Python Code
-The python code worked through accesing the serial monitor in arduino, by using the serial module in python, which would allow it to recieve the values the sensor was reading. We first formatted the code so it would just be a float without any strings. We would split and strip peices of the string when accessed so it would just be the number. We would then assign the code into the data with a time for each of the steps in the heat profile, and repeat this proces. We would then use the matplotlib module to plot the data onto the bar graphs. Most of the code was made by Srinivas uncle.
-##### HP-354
+#### HP-354
 ![Screenshot 2022-08-01 150747](https://user-images.githubusercontent.com/110428822/183178385-a39f93a1-03f8-4f25-ab38-c60502f6a718.png)
 
 
@@ -70,7 +69,7 @@ The python code worked through accesing the serial monitor in arduino, by using 
 
 
 ![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/183186130-df86e44d-33b8-4cab-ab5f-61860a251ca3.png)
-##### HP-411
+#### HP-411
 
 
 ![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183183324-b08c11ec-672a-498f-a2cf-a4a42db36886.png)
@@ -82,6 +81,31 @@ The python code worked through accesing the serial monitor in arduino, by using 
 
 ![Screenshot 2022-08-03 135837](https://user-images.githubusercontent.com/110428822/183188406-0c8c6326-92b1-4b35-8267-fbe9edd51cc7.png)
 
+## Code
+For the code, we decided to split up the code into several function that could be called when needed for simplicities sake. Below is an explanation of the function of each function. 
+
+(Line 1 - 66 is just libraries and definitions of variables for the code)
+
+`void startupScreen()` - This function holds all of the code for the TFT Screen to print out our logo and company name on the screen upon boot. It gets called during `void setup()`.
+
+`void initializeNTP()` - This function uses the NTP (Network Time Protocol) in order to connect to an NTP server and recieve time to display on our screen. It gets called during `void setup()`.
+
+`void initializeBMESensor()` - This function initializes the BME680 and makes it ready for use whilst also setting oversampling and also returns error messages to the serial monitor for troubleshooting. It gets called during `void setup()`
+
+`void initializeDFPlayerMini()` - This function sets up the DFPlayer Mini for use and also gives us updates on both errors as well as progress of the setup of the DFPlayer. It gets called during `void setup()`.
+
+`void initializeLEDs()` - This function initializes the FastLED library, the library used for controlled the led strip we have inside of the case. It gets called during `void setup()`.
+
+`void printTime()` - This function utilizes the TFT screen in tandem with the NTP in order to print the current time to the screen for the user's convenience. It gets called during `void loop()`.
+
+`void measureGasResistance()` - This function uses the Adafruit BME680 library in order to set the heater profile and pull values. It then stores those values in variables that make it available for use later in the code. (*Note - For simplicity and times sake, we only used one heater profile -- HP-354 -- but we collected data for both HP-354 and HP-411) The function also prints out those values to the serial monitor for easy debugging. It gets called during `void loop()`.
+
+`void detectGases()` - This function utilizes the previous heater profile values stored in those variables in order to detect one of three different types of household hazards -- a fire, a bleach leak, or a gasoline leak. Once it detects a hazard, the function will print the hazard on the screen while also changing the lights red and also playing a loud noise to alert the homeowner. In the case a hazard is not present, however, the screen will print "normal" and nothing will sound. It gets called during `void loop()`.
+
+## Testing 
+
+https://user-images.githubusercontent.com/80157888/183226086-66d02789-4ec0-4276-b159-bb05ae5ba8f8.mp4
 
 ## Conclusion
 In conclusion, we are very proud of our device we made, as we also had a lot of fun making it. This device in the real world would be very helpful and will look aesthetic and pleasing.
+
