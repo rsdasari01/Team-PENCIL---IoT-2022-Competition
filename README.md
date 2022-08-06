@@ -59,7 +59,9 @@ Hp-411 fire values has a similar trend to bleach and normal gasses/atmosphere, b
 
 ### Python Graphs
 These are our python graphs and they were helpful to somewhat until we found out that the graphs weren't as helpful to us as we needed them so we thought we shouldn't analyze them.
-#### HP-354
+#### Python Code
+The python code worked through accesing the serial monitor in arduino, by using the serial module in python, which would allow it to recieve the values the sensor was reading. We first formatted the code so it would just be a float without any strings. We would split and strip peices of the string when accessed so it would just be the number. We would then assign the code into the data with a time for each of the steps in the heat profile, and repeat this proces. We would then use the matplotlib module to plot the data onto the bar graphs. Most of the code was made by Srinivas uncle.
+##### HP-354
 ![Screenshot 2022-08-01 150747](https://user-images.githubusercontent.com/110428822/183178385-a39f93a1-03f8-4f25-ab38-c60502f6a718.png)
 
 
@@ -68,7 +70,7 @@ These are our python graphs and they were helpful to somewhat until we found out
 
 
 ![Screenshot 2022-08-01 135024](https://user-images.githubusercontent.com/110428822/183186130-df86e44d-33b8-4cab-ab5f-61860a251ca3.png)
-#### HP-411
+##### HP-411
 
 
 ![Screenshot 2022-08-02 105006](https://user-images.githubusercontent.com/110428822/183183324-b08c11ec-672a-498f-a2cf-a4a42db36886.png)
