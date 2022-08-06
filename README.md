@@ -106,13 +106,12 @@ For the code, we decided to split up the code into several functions that could 
 
 https://user-images.githubusercontent.com/80157888/183226086-66d02789-4ec0-4276-b159-bb05ae5ba8f8.mp4
 
-https:![IMG_1140](https://user-images.githubusercontent.com/110428822/183228266-e717b72e-7297-4393-a9ff-ff0072fac188.jpg)
+https://user-images.githubusercontent.com/80157888/183227075-c47007af-25b0-4260-bb42-b11bf8e5b506.mp4
 
-//user-images.githubusercontent.com/80157888/183227075-c47007af-25b0-4260-bb42-b11bf8e5b506.mp4
+![IMG_1140](https://user-images.githubusercontent.com/110428822/183228266-e717b72e-7297-4393-a9ff-ff0072fac188.jpg)
 
 ![IMG_1141](htt![IMG_1142](https://user-images.githubusercontent.com/110428822/183228274-d330e679-f2fd-49d3-af7b-70c6bbcbb968.jpg)
 
-//user-images.githubusercontent.com/110428822/183228271-7a04a336-17db-4b93-aa4f-d3d466736b7f.jpg)
 
 ## The Challenges
 One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one. Another issue is that this happened towards the end of the competition, so a lot of the testing had to be redone very quickly and it became quite challenging to work that fast. In the end, we made plans on what to do each day which helped us pace ourselves well enough to have this product finished on time. 
