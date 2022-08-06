@@ -4,18 +4,18 @@ The Sharpener is a device that is capable of detecting gas leaks, bleach leaks, 
 ## Our Plan
 Our plan was to make a device that can detect harmful substances if they are not contained. The first thing we did was brainstorm possible ideas we could do and ended up deciding on the device we're doing right now. After brainstorming, we came up with a design for the case. After we came up with the design of the case, we printed the parts of the case and decided what hardware we were going to use. Then we started programming. After we finished most of the programming, we started running tests for data. After all of that we finished programming the speaker and lights and ran our last test for data.
 ### Team Log
-6/23 Brainstorming Session...
-6/24 Cadding and 3D Printing
-6/25 3D Printing
-6/26 Sanding and Assembling Most of The Case
-6/27 Programming and Working on Case
-6/28 Planning
-6/30 Unpackaging and Testing New parts
-7/1 Still Testing out New Parts
-7/5 Programming Speaker and OLED Screen
-7/20 Assemble Case and Coding
-7/21 - 7/30 Collecting Data and Coding
-7/30 - 8/5 Analyzing, Finalizing Code, Testing, and Presentation
+6/23 Brainstorming Session,
+6/24 Cadding and 3D Printing,
+6/25 3D Printing,
+6/26 Sanding and Assembling Most of The Case,
+6/27 Programming and Working on Case,
+6/28 Planning,
+6/30 Unpackaging and Testing New parts,
+7/1 Still Testing out New Parts,
+7/5 Programming Speaker and OLED Screen,
+7/20 Assemble Case and Coding,
+7/21 - 7/30 Collecting Data and Coding,
+7/30 - 8/5 Analyzing Finalizing Code Testing and Presentation,
 ![Screenshot 2022-08-05 210120](https://user-images.githubusercontent.com/98428580/183227469-a11804b6-c3be-4e60-85f3-852a2520284d.png)
 ![image](https://user-images.githubusercontent.com/98428580/183227490-f8052c6f-182c-469b-82a8-d70bc6dd47f0.png)
 ![image](https://user-images.githubusercontent.com/98428580/183227501-fbe99687-092a-4104-a464-887a76f995d4.png)
