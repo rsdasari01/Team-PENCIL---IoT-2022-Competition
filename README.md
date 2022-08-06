@@ -25,7 +25,7 @@ We used some WS2812B LEDs in order to display a color that would indicate the st
 
 ## Demo
 
-## Data Collection
+## Data Collection + Data Analysis
 Our sensor detects different gasses by using thresholds and boundries that we created for the gas resistivity. So when the values fell under these boundries/threseholds it would run the alert code. To determine these thresholds and boundries we have to collect data of the gasses and create the thresholds after analyzing the data. We used two heat profiles, hp-354 and hp-411, we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emmitted from fire, the smell emmited from gasoline, and the smell emmitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gasses as they are the most harmful to a household. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. One problem we had during data collection is that our sensor fell into the gasoline, so it would permanently read wrong values. In result of this, we had to get a new sensor and redo each trial because we figured that the new sensor would read different values from the previous one.
 
 ### Excel Graphs
@@ -47,7 +47,7 @@ The fire has higher values than the gas but lesser values than the bleach, so it
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690651-4b36ec2a-1949-4c6d-9410-8b3f983b9183.png">
 
-The heat profile Hp-411 was different than Hp-354 because most of the steps in Hp-411 were a lot less and significant than Hp-354's steps.
+The heat profile Hp-411 was different than Hp-354 because most of the steps in Hp-411 were a lot less and significant than Hp-354's steps. But the trend for this heat profile was interesting because instead of starting of with low values it starts of with high values, which also one reason we didnt use this heat profile. Starting it with high values would make the heat profile sensor's values for that to be somewhat inaccurate because that is a big range and it gives the sensor less room for a warm up. Another reason we didn't use this heat profile is because after the first step the rest of the values are really low which make it difficult to establish threseholds if the main distinguishing values is the first step.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182690713-3952e303-23fb-45b4-aa78-636890895f46.png">
 
