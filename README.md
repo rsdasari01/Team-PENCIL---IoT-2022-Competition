@@ -26,17 +26,6 @@ Our plan was to make a device that can detect harmful substances if they are not
 
 7/21 - 8/5 Coding, Testing, Analyzing, Github
 
-![image](https://user-images.githubusercontent.com/98428580/183228409-2770ede8-4380-4985-b211-ada69068bdbf.png)
-![image](https://user-images.githubusercontent.com/98428580/183228418-d3aa5d8f-440d-4406-b200-fe19a27f4691.png)
-![image](https://user-images.githubusercontent.com/98428580/183228424-bf494c11-1629-4666-a7f7-742735cfb2de.png)
-![image](https://user-images.githubusercontent.com/98428580/183228426-23eed537-c573-4880-b036-6ea25fd84b85.png)
-![image](https://user-images.githubusercontent.com/98428580/183228431-47c4cb3b-6c3d-49e6-ba3f-266a7c241ef6.png)
-![image](https://user-images.githubusercontent.com/98428580/183228438-ecb43c6d-dc12-4a17-a873-2d59ec512701.png)
-![image](https://user-images.githubusercontent.com/98428580/183228446-ce6f3397-e0b5-4f81-87a0-1fb9ce10e70f.png)
-![image](https://user-images.githubusercontent.com/98428580/183228451-d292df7b-dcc6-48d9-a97d-478f500dff19.png)
-![image](https://user-images.githubusercontent.com/98428580/183228459-91485294-c2eb-4428-a451-64680768a056.png)
-![image](https://user-images.githubusercontent.com/98428580/183228465-8549be2d-b858-44d5-a4a0-2cce44610fb8.png)
-
 ## The Team 
 ![IMG_4538](https://user-images.githubusercontent.com/80157888/183225542-656aaa66-81d4-4144-b4ba-264d6ad92927.JPG)
 In order to make this device, we had to have a team that was knowledgable as well as innovative and helpful, qualities that can be found in all of us. Dhiren was our main man for photographs and keeping track of our progress along the way. Ranvir was the guy for anything python related but he also crunched the numbers for our data analysis. Rushil was our hardware guy who also handled most of the Arduino code. 
@@ -65,6 +54,10 @@ For times sake, we were unable to create a full blown circuit diagram but below 
 
 ## The Data Collection
 Our sensor detects different gases by using thresholds and boundaries that we created for the gas resistivity so when the values fell under these boundaries/threseholds it would run the alert code. To determine these thresholds and boundaries we have to collect data of the gases and create the thresholds after analyzing the data. We used two heater profiles, HP-354 and HP-411, and we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emitted from fire, the smell emitted from gasoline, and the smell emitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gases as they are the harmful to a household due to fumes. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. 
+
+![IMG_1140](https://user-images.githubusercontent.com/110428822/183228266-e717b72e-7297-4393-a9ff-ff0072fac188.jpg)
+
+![IMG_1141](https://user-images.githubusercontent.com/110428822/183228274-d330e679-f2fd-49d3-af7b-70c6bbcbb968.jpg)
 
 ### Excel Graphs
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110428822/182688620-21195588-37e5-4401-b1fc-c2118fc0500c.png">
@@ -135,16 +128,22 @@ For the code, we decided to split up the code into several functions that could 
 `void detectGases()` - This function utilizes the previous heater profile values stored in those variables in order to detect one of three different types of household hazards -- a fire, a bleach leak, or a gasoline leak. Once it detects a hazard, the function will print the hazard on the screen while also changing the lights red and also playing a loud noise to alert the homeowner. In the case a hazard is not present, however, the screen will print "normal" and nothing will sound. It gets called during `void loop()`.
 
 ## The Development 
+![image](https://user-images.githubusercontent.com/98428580/183228409-2770ede8-4380-4985-b211-ada69068bdbf.png)
+![image](https://user-images.githubusercontent.com/98428580/183228418-d3aa5d8f-440d-4406-b200-fe19a27f4691.png)
+![image](https://user-images.githubusercontent.com/98428580/183228424-bf494c11-1629-4666-a7f7-742735cfb2de.png)
+![image](https://user-images.githubusercontent.com/98428580/183228426-23eed537-c573-4880-b036-6ea25fd84b85.png)
+![image](https://user-images.githubusercontent.com/98428580/183228431-47c4cb3b-6c3d-49e6-ba3f-266a7c241ef6.png)
+![image](https://user-images.githubusercontent.com/98428580/183228438-ecb43c6d-dc12-4a17-a873-2d59ec512701.png)
+![image](https://user-images.githubusercontent.com/98428580/183228446-ce6f3397-e0b5-4f81-87a0-1fb9ce10e70f.png)
+![image](https://user-images.githubusercontent.com/98428580/183228451-d292df7b-dcc6-48d9-a97d-478f500dff19.png)
+![image](https://user-images.githubusercontent.com/98428580/183228459-91485294-c2eb-4428-a451-64680768a056.png)
+![image](https://user-images.githubusercontent.com/98428580/183228465-8549be2d-b858-44d5-a4a0-2cce44610fb8.png)
 
 ## The Demo and Final Product
 
 https://user-images.githubusercontent.com/80157888/183226086-66d02789-4ec0-4276-b159-bb05ae5ba8f8.mp4
 
 https://user-images.githubusercontent.com/80157888/183227075-c47007af-25b0-4260-bb42-b11bf8e5b506.mp4
-
-![IMG_1140](https://user-images.githubusercontent.com/110428822/183228266-e717b72e-7297-4393-a9ff-ff0072fac188.jpg)
-
-![IMG_1141](https://user-images.githubusercontent.com/110428822/183228274-d330e679-f2fd-49d3-af7b-70c6bbcbb968.jpg)
 
 
 ## The Challenges
