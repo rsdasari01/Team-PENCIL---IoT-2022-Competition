@@ -15,6 +15,16 @@ Our plan was to make a device that can detect harmful substances if they are not
 7/5 Programming Speaker and OLED Screen,
 7/20 Assemble Case and Coding,
 7/21 - 8/5 Coding, Testing, Aalyzing, Github
+![image](https://user-images.githubusercontent.com/98428580/183228409-2770ede8-4380-4985-b211-ada69068bdbf.png)
+![image](https://user-images.githubusercontent.com/98428580/183228418-d3aa5d8f-440d-4406-b200-fe19a27f4691.png)
+![image](https://user-images.githubusercontent.com/98428580/183228424-bf494c11-1629-4666-a7f7-742735cfb2de.png)
+![image](https://user-images.githubusercontent.com/98428580/183228426-23eed537-c573-4880-b036-6ea25fd84b85.png)
+![image](https://user-images.githubusercontent.com/98428580/183228431-47c4cb3b-6c3d-49e6-ba3f-266a7c241ef6.png)
+![image](https://user-images.githubusercontent.com/98428580/183228438-ecb43c6d-dc12-4a17-a873-2d59ec512701.png)
+![image](https://user-images.githubusercontent.com/98428580/183228446-ce6f3397-e0b5-4f81-87a0-1fb9ce10e70f.png)
+![image](https://user-images.githubusercontent.com/98428580/183228451-d292df7b-dcc6-48d9-a97d-478f500dff19.png)
+![image](https://user-images.githubusercontent.com/98428580/183228459-91485294-c2eb-4428-a451-64680768a056.png)
+![image](https://user-images.githubusercontent.com/98428580/183228465-8549be2d-b858-44d5-a4a0-2cce44610fb8.png)
 
 ## The Team 
 ![IMG_4538](https://user-images.githubusercontent.com/80157888/183225542-656aaa66-81d4-4144-b4ba-264d6ad92927.JPG)
