@@ -55,8 +55,6 @@ For times sake, we were unable to create a full blown circuit diagram but below 
 ## The Data Collection
 Our sensor detects different gases by using thresholds and boundaries that we created for the gas resistivity so when the values fell under these boundaries/threseholds it would run the alert code. To determine these thresholds and boundaries we have to collect data of the gases and create the thresholds after analyzing the data. We used two heater profiles, HP-354 and HP-411, and we decided to use the one that we liked the most or appealed to us in our final code the most but we ran trials and data collection with both heat profiles. We measured the gas resitivity of the room, the smoke emitted from fire, the smell emitted from gasoline, and the smell emitted from bleach. We decided to measure normal room gas just to compare our data and see the differences, while we decided to use the other gases as they are the harmful to a household due to fumes. To collect our data we ran python code and used the serial monitor to collect values. After evaluating both we decided to use the serial monitor values as they seemed easier to read and easier to build our threseholds around. 
 
-![IMG_1140](https://user-images.githubusercontent.com/110428822/183228266-e717b72e-7297-4393-a9ff-ff0072fac188.jpg)
-
 ![IMG_1141](https://user-images.githubusercontent.com/110428822/183228274-d330e679-f2fd-49d3-af7b-70c6bbcbb968.jpg)
 
 ### Excel Graphs
